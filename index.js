@@ -2,7 +2,7 @@ const psl = require('psl')
 
 function parseDomain (url) {
   if (!url) return null
-  const hostname = url.replace(/^((http(s)?:)?\/\/)?/, '').replace(/([/?].*)$/, '')
+  const hostname = url.trim().replace(/^(((http(s)?:)?\/\/)|.*\@)/, '').replace(/([/?].*)$/, '')
   const parsed = psl.parse(hostname)
   return {
     domain: parsed.sld,

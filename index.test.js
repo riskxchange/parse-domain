@@ -40,6 +40,21 @@ test('it works with urls', t => {
   )
 })
 
+test('test@example.com', t => {
+  t.deepEqual(
+    parseDomain('test@example.com'),
+    { tld: 'com', domain: 'example', subdomain: null }
+  )
+})
+
+
+test('mailto:test@example.com', t => {
+  t.deepEqual(
+    parseDomain('mailto:test@example.com'),
+    { tld: 'com', domain: 'example', subdomain: null }
+  )
+})
+
 test('*.gov.uk', t => {
   t.deepEqual(
     parseDomain('www.gov.uk'),
