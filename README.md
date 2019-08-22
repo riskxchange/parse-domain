@@ -3,7 +3,7 @@
 ## Installation
 
 ```js
-npm i riskxchange/@riskxchange/parse-domain
+npm i riskxchange/parse-domain
 ```
 
 ## Usage
